@@ -1,0 +1,119 @@
+<?php
+include 'connect.php';
+if(isset($_POST['grade'])){
+
+    $type = isset($_POST['type']) ? $_POST['type'] : null;
+    $size = isset($_POST['system-size']) ? $_POST['system-size'] : null; 
+    $grade = isset($_POST['grade']) ? $_POST['grade'] : null; 
+   
+   
+   
+}
+?>
+<?php include('header.php')  ?>
+
+<body class="cpbody">
+    
+</body>
+
+<div class="divproducttext">
+        
+    <legend class="l2">Select Soral Panel</legend>
+        
+</div>
+
+    <form action="batteries.php" method="POST">
+
+        <input type="hidden" name="grade"  value="<?php echo empty($grade) ? null : $grade; ?>" >
+        <input type="hidden" name ="type" value="<?php echo empty($type) ? null : $type; ?>" >
+        <input type="hidden" name="brand" id="brand" value="">
+       
+        
+        
+        <div class="containerpic" id="containerpic">
+            
+            <?php
+                $sql = "Select * from products where p_grade ='$grade' and p_name ='Panel'";
+                $result = mysqli_query($conn,$sql);
+                if($result->num_rows>0){
+
+                   
+                    for($i=1;$row = $result->fetch_assoc();$i++){
+                        echo $brand = $row['p_brand'];
+                        ?>
+                       
+                 <div class="divpic">
+                
+            
+                <input type="radio" name="panel-image" id="<?php echo"image".$i ;?>" value="<?php echo "$row[p_brand]"?>" onclick="showModel('<?php echo $brand ?>')">
+                <label for="<?php echo"image".$i ;?>">
+                <img src="<?php echo"./pics/$row[p_image]";?>" alt="">
+                </label>
+                <div class="divtext"><h3><b><?php echo"$row[p_brand] "."  "." $row[p_name]"; ?></b></h3></div>
+                </div>
+
+            <?php
+             
+                   }//for
+                  
+                }//if
+            ?>
+            
+            <?php 
+
+            if(isset($_POST['brand'])){
+                echo $_POST['brand'];
+            }else{
+                echo "hamzaaaaaaaaa";
+            }
+            
+        //    $b ='<p id="para"></p>';
+        //    echo $b;
+        //    $bb = trim($b);
+
+        //    $doc = new DOMDocument();
+        //    $doc->loadHTML($b);
+        //    $para = $doc->getElementById('para');
+        //    $bran = $para->textContent;
+        //    echo $bran;
+           
+        ?>
+
+        </div><br>
+
+        <div class="divmodel" id="divmodel">
+            <legend class="l1">Select Solar Panel Model</legend>
+            <?php 
+            
+            $sql2 = "SELECT * FROM products AS p LEFT OUTER JOIN productmodel AS pm ON p.p_id = pm.p_id WHERE p.p_brand = '$bb' AND p.p_name = 'Panel';";
+            $result2 = mysqli_query($conn,$sql2);
+            if($result2->num_rows>0){
+                for($i=1;$row2 = $result2->fetch_assoc();++$i){
+            ?>
+            <input type="radio" name="pmodel" id="<?php echo"model".$i ;?>" value="<?php echo "$row2[p_model]"?>">
+            <label for="<?php echo"model".$i ;?>"><?php echo "$row2[p_model]"?></label>
+
+           <br>
+           <br>
+                    
+            <?php
+                }
+            }else{
+                echo"Error";
+            }
+            ?>
+           
+        </div><br>
+
+        <button class="gradeBtp" ><a href="Grade.php"><--Previous</a></button>
+        <input type="submit" name="panels" class="gradeBt" value="Next-->">
+    
+    </form>
+
+    
+
+        <?php include('footer.php') ?>
+
+        <script src="script.js">            
+
+        </script>

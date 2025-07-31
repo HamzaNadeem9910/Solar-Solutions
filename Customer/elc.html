@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Load Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .container-fluid {
+            width: 100%;
+            height: 100vh; /* Make it full height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Added for stacking context */
+            overflow: hidden; /* Prevents scrolling from background animation */
+        }
+        .calculator-container {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            z-index: 1; /* Ensure it's above the background */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: transparent;
+            backdrop-filter: blur(50px);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .appliance {
+            margin-bottom: 20px;
+        }
+        .appliance label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .appliance input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        #calculateBtn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        #calculateBtn:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
+            color: #333;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 100;
+            }
+        }
+        /* ============= Animation background ========= */
+        .background {
+            background: linear-gradient(132deg, #4d4d4d, #999999, #919191);
+            background-size: 400% 400%;
+            animation: Gradient 15s ease infinite;
+            position: absolute; /* Changed to absolute for better stacking */
+            height: 100%;
+            width: 100vw;
+            overflow: hidden;
+            z-index: 0; /* Ensure it stays behind the calculator */
+        }
+        .cube {
+            position: absolute;
+            top: 80vh;
+            left: 45vw;
+            width: 10px;
+            height: 10px;
+            border: solid 1px #D7D4E4;
+            transform-origin: top left;
+            transform: scale(0) rotate(0deg) translate(-50%, -50%);
+            animation: cube 12s ease-in forwards infinite;
+        }
+        .cube:nth-child(2n) {
+            border-color: #FFF;
+        }
+        .cube:nth-child(2) {
+            animation-delay: 2s;
+            left: 25vw;
+            top: 40vh;
+        }
+        .cube:nth-child(3) {
+            animation-delay: 4s;
+            left: 75vw;
+            top: 50vh;
+        }
+        .cube:nth-child(4) {
+            animation-delay: 6s;
+            left: 90vw;
+            top: 10vh;
+        }
+        .cube:nth-child(5) {
+            animation-delay: 8s;
+            left: 10vw;
+            top: 85vh;
+        }
+        .cube:nth-child(6) {
+            animation-delay: 10s;
+            left: 50vw;
+            top: 10vh;
+        }
+        @keyframes Gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        @keyframes cube {
+            from {
+                transform: scale(0) rotate(0deg) translate(-50%, -50%);
+                opacity: 1;
+            }
+            to {
+                transform: scale(20) rotate(960deg) translate(-50%, -50%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background & animation & navbar & title -->
+    <div class="container-fluid">
+        <!-- Background animation -->
+        <div class="background">
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="calculator-container">
+                <h2>Energy Load Calculator</h2>
+
+                <!-- Energy Saver -->
+                <div class="appliance">
+                    <label>Energy Saver (25W)</label>
+                    <input type="number" id="energySaverQty" placeholder="Quantity" min="1">
+                    <input type="number" id="energySaverHours" placeholder="Daily Usage (hours)" min="1">
+                </div>
+
+                <!-- LED TV -->
+                <div class="appliance">
+                    <label>LED TV (25W)</label>
+                    <input type="number" id="ledTvQty" placeholder="Quantity" min="1">
+                    <input type="number" id="ledTvHours" placeholder="Daily Usage (hours)" min="1">
+                </div>
+
+                <!-- Refrigerator -->
+                <div class="appliance">
+                    <label>Refrigerator (100W)</label>
+                    <input type="number" id="fridgeQty" placeholder="Quantity" min="1">
+                    <input type="number" id="fridgeHours" placeholder="Daily Usage (hours)" min="1">
+                </div>
+
+                <!-- Fan -->
+                <div class="appliance">
+                    <label>Fan (50W)</label>
+                    <input type="number" id="fanQty" placeholder="Quantity" min="1">
+                    <input type="number" id="fanHours" placeholder="Daily Usage (hours)" min="1">
+                </div>
+
+                <!-- Calculate Button -->
+                <button id="calculateBtn" onclick="calculateEnergy()">Calculate</button>
+
+                <!-- Result Display -->
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculateEnergy() {
+            // Power ratings (in watts)
+            const powerRatings = {
+                energySaver: 25,
+                ledTv: 25,
+                fridge: 100,
+                fan: 50
+            };
+
+            // Retrieve quantities and usage hours
+            const energySaverQty = parseInt(document.getElementById('energySaverQty').value) || 0;
+            const energySaverHours = parseInt(document.getElementById('energySaverHours').value) || 0;
+            const ledTvQty = parseInt(document.getElementById('ledTvQty').value) || 0;
+            const ledTvHours = parseInt(document.getElementById('ledTvHours').value) || 0;
+            const fridgeQty = parseInt(document.getElementById('fridgeQty').value) || 0;
+            const fridgeHours = parseInt(document.getElementById('fridgeHours').value) || 0;
+            const fanQty = parseInt(document.getElementById('fanQty').value) || 0;
+            const fanHours = parseInt(document.getElementById('fanHours').value) || 0;
+
+            // Input validation
+            // if (energySaverQty <= 0 || energySaverHours <= 0 || 
+            //     ledTvQty <= 0 || ledTvHours <= 0 || 
+            //     fridgeQty <= 0 || fridgeHours <= 0 || 
+            //     fanQty <= 0 || fanHours <= 0) {
+            //     alert('Please enter valid quantities and usage hours greater than zero.');
+            //     return;
+            // }
+
+            // Calculate total energy consumption in watt-hours (Wh)
+            const totalEnergy = 
+                (energySaverQty * energySaverHours * powerRatings.energySaver) +
+                (ledTvQty * ledTvHours * powerRatings.ledTv) +
+                (fridgeQty * fridgeHours * powerRatings.fridge) +
+                (fanQty * fanHours * powerRatings.fan);
+
+            // Convert total energy from Wh to kWh
+            const totalEnergyKwh = (totalEnergy / 1000).toFixed(2);
+
+            // Display the result
+            document.getElementById('result').innerText = `Total Daily Energy Consumption: ${totalEnergyKwh} kWh`;
+        }
+    </script>
+</body>
+</html>

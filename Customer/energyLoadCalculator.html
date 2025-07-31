@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>energyloadcalc</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="elcStyle.css">
+        <script src="elc.js"></script>
+    </head>
+    <body>
+
+
+<!-- Background & animion & navbar & title -->
+<div class="container-fluid">
+    <!-- Background animtion-->
+        <div class="background">
+           <div class="cube"></div>
+           <div class="cube"></div>
+           <div class="cube"></div>
+           <div class="cube"></div>
+           <div class="cube"></div>
+
+
+
+        <div class="backgroundnav">
+            <div id="d1">
+                <img src="logof.gif" alt="Alpha Solar Logo" class="logo">
+                <p id="p1">Call Us Today! +92 301-0068484 | sales@SOLARSolutions.com.pk</p>
+                
+            </div>
+    
+            <div class="topnav">
+              <div class="dropdown">
+                  <button class="dropbtn"><a class="aheader" href="home.html">Home</a></button>
+                  <div class="dropdown-content">
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">About Us</button>
+                    <div class="dropdown-content">
+                    </div>
+                  </div>
+    
+                  <div class="dropdown">
+                    <button class="dropbtn">Solar Packages</button>
+                    <div class="dropdown-content">
+                      <a href="#">Solar Hybrid System</a>
+                      <a href="#">Solar On-Grid System</a>
+                    </div>
+                  </div>
+    
+                  <div class="dropdown">
+                    <button class="dropbtn">Products</button>
+                    <div class="dropdown-content">
+                      <a href="#">Solar Panels</a>
+                      <a href="#">Solar Inverters</a>
+                      <a href="#">Solar Dry Batteries</a>
+                    </div>
+                  </div>
+    
+                  <div class="dropdown">
+                    <button class="dropbtn">Solar Solution</button>
+                    <div class="dropdown-content">
+                      <a href="#">Customize Package</a>
+                    </div>
+                  </div>
+    
+                  <div class="dropdown">
+                    <button class="dropbtn">Net Metering</button>
+                    <div class="dropdown-content">
+                    </div>
+                  </div>
+    
+                  <div class="dropdown">
+                    <button class="dropbtn">Projects</button>
+                    <div class="dropdown-content">
+                    </div>
+                  </div>
+    
+                  <div class="dropdown">
+                    <button class="dropbtn">Shop</button>
+                    <div class="dropdown-content">
+    
+                    </div>
+                  </div>
+
+</div>
+
+
+           <h1 class="elcheading">ENERGY LOAD CALCULATOR</h1>
+           <p class="p222">Calculate Load Of Your Building</p>
+
+        <div class="calc">
+
+                <div class="app11">
+                  <div class="app12"><h3>Appliance</h3></div>
+                    <div class="app13">
+                      <select name="appliances" id="appliances">
+                        <option value="EnergySaver">Energy Saver</option>
+                        <option value="Led">Led</option>
+                        <option value="Fan">Fan</option>
+                        <option value="WaterPump">Water Pump</option>
+                      </select>
+                    </div>
+                  </div>
+
+                <div class="app21">
+                  <div class="app22"><h3>Power Ratings (Watts)</h3></div>
+                  <div class="app23">
+                    <div class="powrate">
+                      <p>25.00</p>
+                    </div>
+                  </div>
+                  </div>
+
+
+                <div class="app31" style="background-color: white;">
+                  <div class="app32"><h3>Daily Usage (hours)</h3></div>
+                  <div class="app33">
+                    <div class="avguse">
+                      <input type="text" name="dailyuse" id="dailyuse" placeholder=" 0">
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="app41">
+                    <div class="app42"><h3>Quantity</h3></div>
+                    <div class="app43">
+                      <div class="quantity">
+                        <input type="text" name="quan" id="quan" placeholder=" 0">
+                      </div>
+                    </div>
+                    </div>
+                </div>
+
+        </div>
+
+      <div class="parentcalc">
+        <div class="calculation">
+          <h1 id="calcVal">0.00 kWh</h1>
+          <button onclick="calval()">CALCULATE</button>
+        </div>
+        <button id="add">ADD</button>
+        <button id="remove" onclick="duplicateDiv()">REMOVE</button>
+      </div>
+
+      <div class="promptparent">
+        <h4 class="prompt">DO YOU WANT TO  CUSTOMIZE YOUR OWN PACKAGE!</h4>
+        <button id="custpack">CUSTOMIZE PACKAGE</button>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="footer">
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4>Info</h4>
+            <ul class="links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Service</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul class="links">
+              <li><a href="#">Energy Load Calculator</a></li>
+              <li><a href="#">Customize Package</a></li>
+              <li><a href="#">Maintenance Service</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul class="links">
+              <li><a href="#">Customer Agreement</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Security</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="news">Newsletter</h4>
+            <p>
+              Subscribe to our newsletter for a weekly dose
+              of news, updates, helpful tips, and
+              exclusive offers.
+            </p>
+            <form action="#">
+              <input type="email" placeholder="Your email" required>
+              <button type="submit">SUBSCRIBE</button>
+            </form>
+            <div class="icons">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+          </div>
+        </div>
+      </section>    
+        
+
+
+    </body>
+</html>

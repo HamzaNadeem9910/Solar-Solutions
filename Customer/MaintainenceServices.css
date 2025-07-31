@@ -1,0 +1,400 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#content {
+    padding: 20px;
+}
+
+#overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: 1001; /* Ensure it is above the header */
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay:target {
+    display: flex; /* Show overlay when target is activated */
+}
+
+#overlayContent {
+    background: white;
+    box-shadow: 1px 1px 20px rgb(224, 224, 223);
+    border-radius: 8px;
+    position: relative;
+    height: 350px;
+    width: 490px;
+    padding-left: 10px;
+}
+
+#closeOverlay{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#blurBackground {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px); /* Blur effect for the background */
+    z-index: 1000; /* Ensure it is above the main content but below the overlay */
+    background: rgba(56, 56, 56, 0.8); /* Semi-transparent background */
+
+}
+
+#headingSelectServices {
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+button {
+    border: none; /* Remove border */
+    background: none; /* Remove background */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:focus {
+    outline: none; /* Remove focus outline */
+}
+
+#installationBtn{ 
+    background-color: #000000; /* Green background */
+    color: white; /* White text */
+    padding: 15px 88px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline-block */
+    font-size: 16px; /* Font size */
+    margin: 10% 80px;
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    outline: none; /* Remove default outline */
+    box-shadow: none; /* Remove default box-shadow */
+    font-weight: 400;
+}
+
+#installationBtn:hover{
+
+    color: black;
+    background-color: rgb(185, 185, 185);
+    border: none;
+    font-weight: 400;
+
+}
+
+
+
+#maintainenceServicesBtn { 
+    background-color: #000000; /* Green background */
+    color: white; /* White text */
+    padding: 15px 55px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline-block */
+    font-size: 16px; /* Font size */
+    margin: 1% 85px;
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    outline: none; /* Remove default outline */
+    box-shadow: none; /* Remove default box-shadow */
+    font-weight: 400;
+    margin-top: -20px;
+
+}
+
+#openOverlay2 { 
+    background-color: #000000; /* Green background */
+    color: white; /* White text */
+    padding: 15px 78px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline-block */
+    font-size: 16px; /* Font size */
+    margin: 5% 80px;
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    outline: none; /* Remove default outline */
+    box-shadow: none; /* Remove default box-shadow */
+    font-weight: 400;
+    margin-top: -20px;
+
+}
+
+#openOverlay2:hover{
+
+    color: black;
+    background-color:rgb(185, 185, 185);
+    border: none;
+    font-weight: 400;
+
+}
+
+#overlay2 {
+    display: block;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: relative;
+    z-index: 1002;
+
+}
+#maintainenceOverlayContent{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 30.7%;
+    z-index: 1002;
+    width: 500px;
+    height: 700px;
+    margin-top: 11.2%;
+    width: 500px;
+     background: white;
+    box-shadow: 1px 1px 20px rgb(224, 224, 223);
+    border-radius: 8px;
+    
+}
+#closeOverlay1 {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+#selectCity{
+    color: black;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#lahore {
+    height: 55px;
+    width: 247px;
+    font-size: large;
+    float: left;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-bottom: 60px;
+    
+}
+#lahore:hover{
+    background-color: rgb(129, 123, 123);
+    border: none;
+}
+#seperater{
+    height: 55px;
+    width: 6px;
+    background-color: rgb(175, 175, 166);
+    float: inline-start;
+    margin-bottom: 60px;
+}
+
+#Gujranwala {
+    height: 55px;
+    width: 247px;
+    float: left;
+    border: none;
+    font-size: large;
+    background-color: black;
+    color: white;
+    margin-bottom: 60px;
+}
+#Gujranwala:hover {
+    background-color: rgb(129, 123, 123);
+    border: none;
+}
+#divForm{
+    display: none;
+    width: inherit;
+    height: 4000px;
+    
+}
+
+#l1{
+    float: left;
+    margin-left: 50px;
+    font-weight: bolder;
+}
+
+#l2{
+    
+    margin-left: 10px;
+    font-weight: bolder;
+}
+
+#i1 {
+    float: left;
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 0px;
+    margin-top: 30px;
+    resize: vertical;
+    height: 25px;
+    margin-bottom: 20px; /* Reduce bottom margin */
+    padding: 10px; /* Adjust padding for better alignment */
+    width: 250px; /* Reduce width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#i2 {
+    
+    margin-left: 5px;
+    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Reduce bottom margin */
+    padding: 10px; /* Adjust padding for better alignment */
+    width: 350px; /* Reduce width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+#selectMaintainenceType{
+    height: 200px;
+    margin-top: 40px;
+    width: 40%;
+    float: left;
+    border-right: .1875rem solid black;
+    text-align: center;
+    align-content: center;
+    font-size: x-large;
+}
+#MaintainenceTypeBtns{
+    margin-top: 40px;
+    justify-content: center;
+    align-content: center;
+    height: 200px;
+    width: 59.4%;
+    float: right;
+}
+#maintainenceBtn{
+    margin-left: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 45px;
+    width: 220px;
+    border-radius: 10px;
+    border: 2px solid ;
+}
+
+#maintainenceBtn:hover{
+    Background-color: rgb(129, 123, 123);
+}
+
+
+#washingBtn{
+    margin-left: 30px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    background-color: black;
+    color: white;
+    height: 46px;
+    width: 220px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid ;
+}
+
+#washingBtn:hover{
+    Background-color: rgb(129, 123, 123);
+}
+
+
+.divform{
+    display: none;
+    margin-top: 50px;
+    padding-top: 228px;
+    margin-left: 40%;
+    
+}
+.divform input[type="radio"] {
+    display: none;
+}
+
+.divform input[type="radio"] + label {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #999;
+}
+
+.divform input[type="radio"] + label:hover{
+    /*filter: drop-shadow(1px 1px 1px green);
+    */box-shadow: 2px 2px 2px 2px rgb(129, 123, 123);
+    border-radius: 15px;
+}
+
+.divform input[type="radio"] + label:before {
+    content: '\25BA'; /* Unicode for right-pointing arrow */
+    font-size: 1.2em;
+    color: transparent;
+    position: absolute;
+    left: -30px;
+    transition: color 0.3s;
+}
+
+.divform input[type="radio"]:checked + label {
+    background: rgb(209, 204, 204);
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    box-shadow: none;
+    font-weight: bold;
+}
+
+.divform input[type="radio"]:checked + label:before {
+    color: black;
+}
+.l2{
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: -100px;
+}
+#bookMaintainence{
+    padding: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-left: -35px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 2%;
+
+}
+
+#bookMaintainence:hover{
+    Background-color: rgb(129, 123, 123);
+}
