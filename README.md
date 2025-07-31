@@ -68,36 +68,69 @@
 
 ## 📸 Project Screenshots
 
-> Make sure the `screenshots` folder exists in your repo and includes the following image files.
-
 ### 🏠 Home Page
 <p align="center">
-  <img src="screenshots/home.png" width="600"/>
+  <img src="Snapshot/Screenshot (276).png" width="600"/>
 </p>
 
-### 🧮 Energy Load Calculator
+### 💬 Customer Feedback
 <p align="center">
-  <img src="screenshots/energy_calc.png" width="600"/>
+  <img src="Snapshot/Screenshot (281).png" width="600"/>
 </p>
 
-### 🧰 Customize Package
+### 📝 Customer Sign Up
 <p align="center">
-  <img src="screenshots/customize_package.png" width="600"/>
+  <img src="Snapshot/Screenshot (282).png" width="600"/>
 </p>
 
-### 🔧 Book Maintenance Service
+### 🔢 Energy Load Calculator
 <p align="center">
-  <img src="screenshots/book_maintenance.png" width="600"/>
+  <img src="Snapshot/Screenshot (304).png" width="600"/>
+</p>
+
+### 🧰 Make Customized Package
+<p align="center">
+  <img src="Snapshot/Screenshot (283).png" width="600"/>
+</p>
+
+### 🛒 Select Product
+<p align="center">
+  <img src="Snapshot/Screenshot (286).png" width="600"/>
+</p>
+
+### 🧪 Select Product Model
+<p align="center">
+  <img src="Snapshot/Screenshot (287).png" width="600"/>
+</p>
+
+### 🧩 Final Customized Package
+<p align="center">
+  <img src="Snapshot/Screenshot (290).png" width="600"/>
+</p>
+
+### 🧰 Book Maintenance Service
+<p align="center">
+  <img src="Snapshot/Screenshot (303).png" width="600"/>
 </p>
 
 ### 📦 Recommended Packages
 <p align="center">
-  <img src="screenshots/recommended_packages.png" width="600"/>
+  <img src="Snapshot/Screenshot (279).png" width="600"/>
 </p>
 
-### 📋 Admin Dashboard
+### 🔐 Admin Login
 <p align="center">
-  <img src="screenshots/admin_dashboard.png" width="600"/>
+  <img src="Snapshot/Screenshot (291).png" width="600"/>
+</p>
+
+### 📊 Admin Dashboard
+<p align="center">
+  <img src="Snapshot/Screenshot (292).png" width="600"/>
+</p>
+
+### 🛠️ Admin Product Panel
+<p align="center">
+  <img src="Snapshot/Screenshot (293).png" width="600"/>
 </p>
 
 ---
@@ -105,16 +138,3 @@
 ## 📈 Why This Project?
 
 ⚡ In an era where **solar energy** is a crucial step toward sustainability, this system enables customers to make informed decisions about their energy needs. With tools like **custom packages** and **load calculators**, it offers both flexibility and functionality in one clean, interactive interface.
-
----
-
-## 📬 Feedback and Contributions
-
-- 💡 Got suggestions? Feedback?
-- 🛠️ Want to contribute? Fork and make a pull request!
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
