@@ -4,7 +4,7 @@
 session_start();
 
 
-define('SITEURL','http://192.168.56.1:8080/DBSFE/');
+define('SITEURL','http://Your_Pc_IPv4_Address:8080/');
 
 $serverName ="localhost";
 $username ="root";
