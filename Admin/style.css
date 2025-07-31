@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.full-table{
+
+    max-width: 100%;
+    padding: 1%;
+
+}
+table tr th{
+    border-bottom: 2px solid black;
+    text-align: left;
+    padding: 1%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: underline;
+    color: #353b48;
+}
+table tr td{
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    color: #44bd32;
+    border-bottom: 2px solid black;
+}
+.bt-primary{
+    background-color: #badc58;
+    border: 2px solid yellow;
+    padding:10px 10px 10px 10px;
+    border-radius: 20px;
+    box-shadow:0 0 10px greenyellow;
+}
+.bt-primary:hover{
+    background-color: #4cd137;
+}
+.bt-secondary{
+    background-color: #ff7979;
+    border: 2px solid yellow;
+    padding:10px 10px 10px 10px;
+    border-radius: 20px;
+    box-shadow:0 0 10px #fbc531;
+
+}
+.bt-secondary2{
+    background-color: lawngreen;
+    border: 2px solid yellow;
+    padding:10px 10px 10px 10px;
+    border-radius: 20px;
+    box-shadow:0 0 10px #fbc531;
+    margin-bottom: 10%;
+
+
+}
+.bt-secondary:hover{
+    background-color: red;
+}
+.bt-secondary2:hover{
+    background-color: lightgreen;
+}
+.img1{
+    width: 60%;
+    height: 60%;
+    border-radius: 20px;
+}
+.div1{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background:green;
+    width: 95%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bolder;
+    opacity: 0.8;
+    box-shadow: 0 0 10px #4cd137;
+
+}
+.logoutb a{
+    color: #f5f6fa;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px 20px ;
+
+}
+a{
+    color: #f5f6fa;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#addform{
+    text-align: center;
+    width: 50%;
+    opacity: 0.7;
+    background: #f5f6fa;
+    justify-content: center;
+    padding: 2%;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #f5f6fa;
+}
+#bodyAdd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    flex-direction: column;
+    background-image: url("admin.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+fieldset{
+    justify-content: center;
+    border-radius: 30px;
+    border: 3px solid yellow;
+}
+input[type="text"],input[type="file"],input[type="number"]{
+    margin: 4%;
+    border-radius: 20px;
+    border: 2px solid yellow;
+    text-align: center;
+    color: #353b48;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 50%;
+}
+textarea{
+    margin: 4%;
+    border-radius: 20px;
+    border: 2px solid yellow;
+    text-align: center;
+    color: #353b48;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 50%;
+
+}
+select{
+    margin: 4% 4% 6% 4%;
+    border-radius: 20px;
+    border: 2px solid yellow;
+    text-align: center;
+    color: #353b48;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 50%;
+
+
+}
+input[type="submit"]{
+    background-color: #44bd32;
+    padding: 2%;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    border: 2px solid yellow;
+    cursor: pointer;
+}
+input[type="text"]:hover{
+    background-color: #f5f6fa;
+    border: 2px solid greenyellow;
+}
+select:hover{
+    background-color: #f5f6fa;
+    border: 2px solid greenyellow;
+
+}
+input[type="submit"]:hover{
+    background-color: green;
+    color: antiquewhite;
+}
+legend{
+    background-color: #44bd32;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    padding: 2%;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+}
+label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    text-decoration: underline;
+}
+#body1{
+    background-color: #dfe4ea;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+#pid{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+#pmodel{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+#add{
+    color: #4cd137;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+}
+#error{
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+}
+.logoutb{
+    background-color: #fbc531;
+    /* float: right; */
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: 3px 3px 3px 3px;
+    margin-bottom: 1%;
+}
+.logoutb:hover{
+    background-color: #ffd500;
+    border-color: #ffd500;
+}
+#fromSearch{
+    text-align: center;
+    width: 80%;
+    justify-content: center;
+    padding: 1%;
+    border-radius: 10%;
+    height: 10px;
+}
+#fromSearch #search{
+    font-size: small;
+    padding: 5px 5px ;
+}
+#fromSearch #search #sSubmit{
+    padding: 3px;
+}
+.div2{
+    background-color:green;
+    text-align: center;
+    justify-content: center;
+    width: 60%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: white;
+    font-weight: bolder;
+    opacity: 0.8;
+    box-shadow: 0 0 10px #4cd137;
+}
+.table-div{
+    display: flex;
+    width: 100%;
+  overflow-x: auto; /* Allows horizontal scroll */
+  -webkit-overflow-scrolling: touch;
+}
+@media only screen and (max-width: 768px) {
+    .full-table{
+
+        padding: 0;
+    
+    }
+    table tr th{
+        border-bottom: 1px solid black;
+        padding: 0%;
+        font-weight: bold;
+        font-size: xx-small;
+    }
+    table tr td{
+        font-size: xx-small;
+        border-bottom: 1px solid black;
+    }
+    .bt-primary{
+        border: 1px solid yellow;
+        padding:3px 3px 3px 3px;
+        
+    }
+    .bt-primary:hover{
+        background-color: #4cd137;
+    }
+    .bt-secondary{
+       
+        border: 1px solid yellow;
+        padding:3px 3px 3px 3px;
+        margin: 0;
+        font-size: x-small;
+    
+    }
+    .bt-secondary2{
+        border: 1px solid yellow;
+        padding:3px 3px 3px 3px;
+        margin: 0%;
+        font-size: xx-small;
+
+    
+    }
+    .bt-secondary:hover{
+        background-color: red;
+    }
+    .bt-secondary2:hover{
+        background-color: lightgreen;
+    }
+    .img1{
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+    }
+    a{
+        font-size: xx-small;
+        font-weight: bold;
+    }
+    #addform input[type="text"],input[type="file"],input[type="number"]{
+        font-size: smaller;
+        width: 80%;
+
+    }
+    #addform input[type="radio"] label{
+        font-size: 3px;
+    }
+    select{
+        font-size: smaller;
+        width: 80%;
+
+    }
+    #addform{
+        width: 80%;        
+    }
+  }
